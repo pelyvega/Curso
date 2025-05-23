@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <style>
+        h1{
+            text-align: center;
+            color: rgb(0, 0, 0);
+            background-color: black;
+            background-image: url("https://th.bing.com/th/id/OIP.dXKoY6gzpyncZPRk1zVzWAHaHa?w=626&h=626&rs=1&pid=ImgDetMain");opacity: 0.5;
+            background-size: auto 200px;
+            background-repeat: repeat-x;
+            padding: 5px 10px;
+        }
+        
+        button{
+            background-color: rgba(247, 3, 3, 0.342);
+        }
+        form{
+            width: 350px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #dfba17;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+        .form-row {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 12px;
+                }
+                .form-row label {
+                    flex: 1;
+                    min-width: 80px;
+                }
+                .form-row input {
+                    flex: 2;
+                    padding: 4px 8px;
+                }
+                form button {
+                    margin-right: 10px;
+                    padding: 6px 16px;
+                }
+        label{
+            align-items: end;
+            }
+    </style>
+    <script>
+        listaProductos=[]
+        function save(){
+            producto = {}
+            producto.codigo = document.getElementById("txtCodigo").value
+            producto.nombre = document.getElementById("txtNombre").value
+            producto.stock  = document.getElementById("txtStock").value
+            producto.valor  = document.getElementById("txtValor").value
+            listaProductos.push(producto)
+            alert("Guardado con exito :)")
+        }
+        function get(){
+            codigo = document.getElementById("txtCodigo").value
+            for (const prod of listaProductos) {
+                if(prod.codigo == codigo){
+                    document.getElementById("txtNombre").value = prod.nombre
+                    document.getElementById("txtStock").value  = prod.stock
+                    document.getElementById("txtValor").value  = prod.valor
+                }
+            }
+        }
+        codigo = 0
+        nombre = ""
+        stock = 0
+        valor = 0
+
+        function Guardar(){
+            codigo = document.getElementById("txtCodigo").value
+            nombre = document.getElementById("txtNombre").value
+            stock  = document.getElementById("txtStock").value
+            valor  = document.getElementById("txtValor").value
+            alert("Guardado satisfactoriamente")
+            document.getElementById("txtCodigo").value = ""
+            document.getElementById("txtNombre").value = ""
+            document.getElementById("txtStock").value = ""
+            document.getElementById("txtValor").value = ""
+        }
+        function Consultar(){
+            document.write("")
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Tienda vitual</h1>
+   
+    <form action="">
+        <label for="">Codigo</label>
+        <input type="text" id="txtCodigo"><br>
+        <label for="">Nombre</label>
+        <input type="text" id="txtNombre"><br>
+        <label for="">Stock</label>
+        <input type="text" id="txtStock"><br>
+        <label for="">Valor</label>
+        <input type="text" id="txtValor"><br>
+        <button type="button" onclick="save()">Guardar</button>
+        <button type="button" onclick="get()">Consultar</button>
+    </form>
+   
+       
+   
+</body>
+</html>

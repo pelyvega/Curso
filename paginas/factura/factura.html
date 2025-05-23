@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Factura Interactiva</title>
+  <link rel="stylesheet" href="stylesfactura.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Factura</h1>
+
+    <form id="product-form">
+      <input type="text" id="product-name" placeholder="Producto" required />
+      <input type="number" id="product-price" placeholder="Precio" required min="0" />
+      <input type="number" id="product-quantity" placeholder="Cantidad" required min="1" />
+      <button type="submit">Agregar</button>
+    </form>
+
+    <table id="invoice-table">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="invoice-body">
+        <!-- Items dinámicos -->
+      </tbody>
+    </table>
+
+    <div class="total">
+      <strong>Total:</strong> $<span id="total">0.00</span>
+    </div>
+  </div>
+
+  <script src="factura.js"></script>
+</body>
+</html>

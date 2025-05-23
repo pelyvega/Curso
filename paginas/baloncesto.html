@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Aspirantes a baloncesto</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Nombre</label>
+        <input type="text" id="txtNombre"><br>
+        <label for="">Edad</label>
+        <input type="text" id="txtEdad"><br>
+        <label for="">Sexo</label>
+        <input type="text" id="txtSexo"><br>
+        <label for="">Estatura</label>
+        <input type="text" id="txtEstatura"><br>
+        <button type="button" onclick="Enviar()">Enviar</button>
+    </form>
+    <script>
+        function Enviar(){
+            nombre = document.getElementById("txtNombre").value
+            edad = document.getElementById("txtEdad").value
+            sexo = document.getElementById("txtSexo").value
+            estatura = document.getElementById("txtEstatura").value
+
+            // aspirantes al equipo de baloncesto
+            
+            if ((edad>18)&&(estatura>1.70)&&(sexo=="M"))
+            {
+                document.write(nombre+"¡Bienvenido al equipo!") 
+            }else{
+                document.write("Lo sentimos " +nombre+" no cumples los requisitos")
+            }
+    }
+
+    </script>
+</body>
+</html>

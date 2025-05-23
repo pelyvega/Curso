@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanzas</title>
+</head>
+<body>
+    <script>
+        horTrab = prompt("Ingrese sus horas de trabajo");
+        pagoPorHor = prompt("Ingrese el costo de la hora");
+        salarioMes = horTrab*pagoPorHor;
+        if(salarioMes<0)
+        {
+            alert("DEBE INGRESAR UN VALOR MAYOR")
+        }
+        else{
+            if(salarioMes>=1000)
+            {
+                retencion=salarioMes*0.01
+                document.write("Se le retiene: ")
+                document.write(retencion)
+            }
+            if(salarioMes<=999)
+            {
+                document.write("No tiene retención: ")
+            }
+            document.write("<br>")
+            document.write("Su pago al mes: ");
+            document.write(salarioMes);
+
+            valorfinal = salarioMes-retencion
+            document.write("<br>")
+            document.write("Pago final: ")
+            document.write(valorfinal)
+        }
+    </script>
+</body>
+</html>
