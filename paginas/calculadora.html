@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+   
+   function realizarOperacion(x, y, operacion) {
+    if (operacion === "suma") {
+        return x + y;
+        } else if (operacion === "resta") {
+        return x - y;
+        } else if (operacion === "multiplicacion") {
+        return x * y; 
+        }else if (operacion === "division") {
+            if (y === 0) {
+                return "ERROR: División por cero NO permitida";
+            } else {
+                 return x / y; 
+            }
+    } else {
+            return "Operación no válida";
+            }
+    }
+    let operacion = prompt("¿Qué operación deseas realizar? (suma, resta, multiplicación, división), o salir");
+    
+    while (operacion !== "salir") {
+        let x = prompt("Ingresa el primer número:");
+        x = Number(x);
+        let y = prompt("Ingresa el segundo número:");
+        y = Number(y);
+        let resultado = realizarOperacion(x, y, operacion);
+        alert("El resultado de la " + operacion + " es: " + resultado);
+        operacion =prompt("¿Qué operación deseas realizar? (suma, resta, multiplicación, división o salir)");
+    }
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

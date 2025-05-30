@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hoja de vida</title>
     <style>
         h1{
             text-align: center;
@@ -72,5 +72,16 @@
             <td>Tarea de ingles</td>
         </tr>
     </table>
+     <h2>Contacto</h2>
+    <p>Si deas contactarme llena el siguente formulario y en envielo en el boton de enviar</p>  
+      <form>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="descripcion">Descripción:</label><br>
+        <input type="text" id="descripcion" name="descripcion"><br>
+        <label for="correo">Correo:</label><br>
+        <input type="email" id="correo" name="correo"><br>
+        <button ype="button" onclick="send()">Enviar</button>
+      </form>
 </body>
 </html>
