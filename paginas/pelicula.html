@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lilo & Stitch</title>
+
+    <style>
+        body{
+            background-color: rgb(201, 242, 255);
+        }
+        h1{
+            border: 3px solid rgb(24, 180, 207); 
+            background-color:azure; 
+            color:rgb(247, 123, 180);
+        }
+        h2{
+            background-color: rgb(247, 123, 180);
+        }
+        h3{
+            background-color: rgb(66, 161, 82);
+        }
+        img{
+            border-radius: 20%;
+        }
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>La mejor pelicula de animación</h1>
+        <h2>Lilo & Stitch</h2>
+        
+        <img src="https://www.ecartelera.com/images/noticias/fotos/49600/49626/1.jpg"/>
+    </center>
+    <ul>
+        <a href="#sesion1">
+            <li>Trailer</li>
+        </a>
+        <a href="#sesion1">
+            <li>Personajes</li>
+        </a>
+    </ul>
+    
+   <h3>Trailer</h3> 
+    <video width="320" height="240" controls>
+            <source src="../videos/Kitustrailers  LILO & STITCH (Trailer nº1 en Español) - Kitus Cine (1080p, h264).mp4" type="video/mp4"/>
+        </video>
+        <a name="sesion1"></a>
+
+    <h3>Personajes</h3>
+        <div class="gallery">
+        <a target="_blank" href="../imagenes/Stitch.jpeg">
+            <img src="../imagenes/Stitch.jpeg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">Stitch</div>
+        </div>
+
+        <div class="gallery">
+        <a target="_blank" href="../imagenes/Lilo.jpeg">
+            <img src="../imagenes/Lilo.jpeg" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">Lilo</div>
+        </div>
+
+        <div class="gallery">
+        <a target="_blank" href="../imagenes/Nani.jpeg">
+            <img src="../imagenes/Nani.jpeg" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Nani</div>
+        </div>
+
+</body>
+</html>
