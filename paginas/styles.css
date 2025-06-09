@@ -1,7 +1,40 @@
-.titulo {
+h1 {
     text-align: center;
     background-color: rgba(233, 84, 25, 0.877);
     color: white;
     padding: 10px;
     font-family: Arial, sans-serif;
+}
+h2 {
+    text-align: center;
+    background-color: rgba(235, 149, 69, 0.747);
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+ul, ol {
+    margin-left: 20px;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+p {
+    text-align: center;;
+    padding: 10px;
+    ;
+}
+img {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    ;
 }

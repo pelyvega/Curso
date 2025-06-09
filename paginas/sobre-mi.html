@@ -22,11 +22,10 @@
     </style> -->
 <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <h1 class="titulo">La vida de Kelly</h1>
-    <h2>Introdución</h2>
-    <center>
+    <h1>La vida de Kelly</h1>
+    <h2>Introducción</h2>
+   
      <img src="../imagenes/kelly.jpeg" width="200" height="210">
   
     <p>¡Hola! Soy Kelly Jhoana Vega Mercado, estudiante de Ingeniería Mecatrónica con una enorme pasión por la tecnología,<br> 
@@ -36,7 +35,7 @@
         Me encanta explorar el mundo de la robótica, la programación y las nuevas herramientas que están transformando <br> 
         el futuro.Soy una persona curiosa, creativa y comprometida con mis objetivos. Siempre busco crecer, aprender y <br>
         dar lo mejor de mí en cada proyecto. 
-      </center>
+    
     </p>
     <h2>Hoja de vida</h2>
     <ul>
@@ -83,7 +82,22 @@
         <input type="text" id="descripcion" name="descripcion"><br>
         <label for="correo">Correo:</label><br>
         <input type="email" id="correo" name="correo"><br>
-        <button ype="button" onclick="send()">Enviar</button>
+        <button type="button" onclick="send()">Enviar</button>
       </form>
+      <script>
+    function send() {
+        let nombre = document.getElementById("nombre").value;
+        let descripcion = document.getElementById("descripcion").value;
+        let correo = document.getElementById("correo").value;
+
+        if (nombre === "" || descripcion === "" || correo === "") {
+            alert("Por favor, completa todos los campos.");
+            return false;
+        }
+
+        alert("Formulario enviado correctamente.");
+    }
+</script>
+
 </body>
 </html>
